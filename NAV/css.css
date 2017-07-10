@@ -1,0 +1,303 @@
+body{
+    background-color: green;
+    margin: 0px;
+    padding: 0px;
+   font-family: 'Poppins', sans-serif;
+}
+.gradient{                                                                              /*tło navigacji*/
+    position: fixed;
+    height: 90px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0)5%, rgb(250,250,250)12%);
+    width: 100%;
+}
+nav{
+    height:80px;
+    background-color: white;
+    margin: 0px;
+    width: 100%;
+}
+.logo{                                                                  /* poczatek logo igi mag*/
+    float: left;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 3rem;
+}
+.log{
+    text-decoration: none;
+    color: black;
+}
+.i{
+    transform: rotate(180deg); 
+}
+.ig, .i{
+    float: left;
+    font-weight: bold;
+}
+.mag{
+    position:absolute;
+    top: 38px;
+    left: 45px;
+    font-size: 70%;
+}                                                                   /* koniec logo igi mag*/
+ol{                                                                 /*Poczatek menu rozwijane  lewa strona */
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 0px;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 2em;
+    line-height: 2em;
+    background-color:white;
+    text-align: left;
+    height:80px;
+    width: 100%;
+}
+ol > li{                                                                /*Linki głowne */
+    float:left;
+    width: 120px;
+    color:aliceblue;
+    padding: 0px;
+    text-align: center;
+}
+ol a {                                                                  /*Linki głowne obstylowanie */
+    display: block;
+    text-decoration: none;
+    color:black;
+    padding-top: 2rem;
+}
+ol > li > a:hover{                                                      /*Linki głowne obstylowanie po najechanu myszą */
+    color:aliceblue;
+    height:48px;
+}
+ol > li > ul {                                                          /*kontenerek rozwijany*/
+    list-style-type: none;
+    visibility:hidden;
+    width: 200px;
+    text-align: left; 
+    margin: 0px;
+    padding: 0px;
+}
+ol > li:hover > ul {                                                         /*kontenerek rozwijany*/
+    visibility:visible;
+    margin-top:0px;
+    padding-top: 0px;
+}                                                                             /*kontenerek rozwijany koniec*/
+ol > li > ul > li {                                                         /*obstylowanie li w ul po rozwinięciu*/
+    height: 30px;
+    padding-left: 1.3rem; 
+}
+ol > li > ul > li > a{                                                      /*obstylowanie a w rozwijanym ul */
+   padding-top: 0px;
+    width: 180px;
+    color: rgba(0,0,0,0);
+    transition-property: color;
+    transition-duration: 500ms;
+}
+ol > li:hover > ul > li > a{                                                  /*kolor liter*/ 
+    color:gray;
+}
+#men{                                                                           /*zmiana koloru*/
+    transition-property: background-color; 
+    transition-duration: 600ms;
+    width: 100%;
+}
+.men1:hover{
+     background-color: #bc2a4e; 
+}                                                                 /*poszczegulne kolory dla każdego ul rozwijanego w menu*/  
+.menu1 > li > a:hover{
+    color: #bc2a4e; 
+}
+.men2:hover{
+     background-color: #ff5722;  
+}
+.menu2 > li > a:hover{
+    color:#ff5722 ; 
+}
+.men3:hover{
+     background-color: #ffc107;
+}
+.menu3 > li > a:hover{
+    color: #ffc107; 
+}
+.men4:hover{
+     background-color: #4caf50;      
+}
+.menu4 > li > a:hover{
+    color: #4caf50; 
+}
+.men5:hover{
+     background-color: #009688;   
+}
+.menu5 > li > a:hover{
+    color: #009688; 
+}
+.men6:hover{
+     background-color: #54249d;   
+}
+.menu6 > li > a:hover{
+    color: #54249d; 
+}
+.men7:hover{
+     background-color: #9c27b0;
+}
+.menu7 > li > a:hover{
+    color: #9c27b0; 
+}
+#men{
+    height: 48px;
+    width: 120px;
+}                                                                       /*poszczegulne kolory dla każdego ul rozwijanego w menu koniec*/
+.linia{
+    height: 5px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border-bottom-color: gray;
+    border-bottom: solid;
+}
+.animation{
+    height: 80px;
+}
+.animation > ul{
+    background-color: rgba(0,0,0,0);
+    transition-property: background-color;
+    transition-duration: 700ms;
+    
+}
+.animation:hover > ul{
+    background-color: white;
+} 
+
+@keyframes gorna {
+    from{}
+    10%, 50%{
+		 transform: translateY(-5px)
+	}
+	50%, 90%{
+		transform: rotate(45deg);
+	}
+    to{ }
+}
+@keyframes dolna {
+    from{}
+    10%, 50%{
+		 transform: translateY(-5px)
+	}
+	50%, 90%{
+		transform: rotate(-45deg);
+	}
+    to{}
+        
+}
+
+
+
+.hamb{                                     /*menu hamburger */
+    width:45px;
+    height:58px;
+    float: right;
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 0px;
+} 
+.hamburger {
+    width: 40px;
+    height: 35px;
+    border: 0px;
+    border-top: 5px solid black;     /*linia środkowa*/
+    background: transparent;
+    position: relative;
+    margin-top: 25px;
+    transition-property: border-top;
+    transition-duration: 0.5s; 
+} 
+.hamburger:focus{
+    border-top: 5px solid transparent;
+}
+.hamburger::before, .hamburger::after {
+    content:'';
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%; 
+    border-top: 5px solid black;             /*linia dolna*/
+    transition: 0.4s transform linear;
+}
+.hamburger::before{
+    transform: translateY(10px); 
+}
+.hamburger:focus::before{
+   animation-name: dolna;                       /*Dolna po kliknięciu*/
+   animation-duration: 1.5s;
+   animation-fill-mode: forwards;
+}
+
+.hamburger::after {
+    transform: translateY(-20px);                   /*górna linia*/
+}
+.hamburger:focus::after {
+    animation-name: gorna;
+    animation-duration: 1.5s;
+   animation-fill-mode: forwards;
+}                                                                                                                
+.niewidoczny{                                       /*menu rozwijane prawe */
+    display: none;
+}
+.widoczny{
+    padding: 0px;
+    display: block;
+    position: fixed;
+    width:400px; 
+    right: 0px;
+    top: 80px;
+    background-color: black;
+   }
+.prawe{
+   list-style: none;
+}  
+.prawe > li{
+    margin-left: -40px;
+    border-bottom: 0px solid;
+}
+.prawe > li > a{
+    color: gray;
+    background-color: black;
+    transition-property: background-color; 
+    transition-duration: 500ms;
+}
+.prawe > .linia{
+    color:gray;
+}
+.prawe > li > a:hover{
+    background-color:rgba(215,215,215,0.3);
+    width: 100%;
+}
+.szara{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-bottom: 1px solid gray;
+    height: 100%;
+}                                                                /*menu rozwijane prawe koniec */
+.ikony1{
+    margin-left: 1.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.ikony2{
+    margin-bottom: 2rem;
+}
+.lupa{
+    float: right;
+    margin: 1.3rem;  
+    transition-duration: 2s;
+}
+.lupalupa:hover{
+    transform: scale(0.7);
+}
+.insta{
+    margin-right: 2rem;
+    margin-left: 0.5rem;
+}
+
